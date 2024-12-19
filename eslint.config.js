@@ -4,10 +4,12 @@ module.exports = [
       languageOptions: {
         ecmaVersion: 2021,
         sourceType: "module",
-      },
-      env: {
-        browser: true, // Enables browser globals (e.g., window, document)
-        node: true,    // Enables Node.js globals (e.g., process, __dirname)
+        globals: {
+          window: true,
+          document: true,
+          process: true,
+          console: true,
+        },
       },
       rules: {
         "no-console": "warn",
